@@ -4,16 +4,18 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
-import ImageGallery from 'react-image-gallery';
-import '../css/image-gallery.css';
+//import ImageGallery from 'react-image-gallery';
+//import '../css/image-gallery.css';
 import Navbar from 'react-bootstrap/Navbar';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Dialog = ( {props} ) => {
 	
 return (
 <>
 
-<Modal show={true} style={{backgroundColor:"black"}} fullscreen={true}>
+<Modal show={true} style={{backgroundColor:"black"}} fullscreen={false}>
 
 <Navbar bg="dark" variant="dark">
 <Container style={{float:"right"}}>
@@ -32,7 +34,13 @@ NFT Collection Generator - Preview
 <Row style={{width:"100%"}}>
 
 <Col style={{maxWidth:"100%"}}>
-<ImageGallery items={props.nft} />
+<Carousel>
+{props.nft.map((image, index) => (
+<div>
+<img src={image.original} />
+</div>
+))}
+</Carousel>
 </Col>
 
 </Row>
