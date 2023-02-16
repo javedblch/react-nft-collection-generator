@@ -19,6 +19,10 @@ A cutting-edge software application designed to simplify the process of creating
 - Easy to set up with create react project
 - Fast NFT generation process
 
+## Live Preview - Demo
+
+- [Click here](https://react-nft-collection-generator.vercel.app) for online Demo version
+
 ## Files included
 
 - Source code of the project
