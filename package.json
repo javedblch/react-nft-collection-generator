@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@vercel/analytics": "^0.1.11",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
     "react": "^18.2.0",

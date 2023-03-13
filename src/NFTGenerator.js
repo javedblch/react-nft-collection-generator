@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Form from 'react-bootstrap/Form';
@@ -18,7 +18,25 @@ import Preview from "./components/Preview";
 import Error from "./components/Error";
 import Generate from "./components/Generate";
 
+import Modal from 'react-bootstrap/Modal';
+
 const NFTGenerator = () => {
+	
+	
+	
+useEffect(() => {
+  const script = document.createElement('script');
+
+  script.src = "//pl18755532.highrevenuegate.com/50/2a/e6/502ae65291e8abd0592a30d5dae16424.js";
+  script.async = true;
+
+  document.body.appendChild(script);
+
+  return () => {
+    document.body.removeChild(script);
+  }
+}, []);
+	
 
 const [currLayer, setCurrLayer] = useState("layer-1");
 const [images, setImages] = useState({"data":[]});	
@@ -177,6 +195,8 @@ setShowErrorMSG('Cannot proceed with empty layers!');
 return;
 }
 
+window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
+
 let w = imageWidth;
 let h = imageHeight;
 let mime = 'image/png';
@@ -303,6 +323,8 @@ setShowErrorMSG('Invalid Layer Name!');
 return;
 }
 
+window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
+
 let json = JSON.stringify(images);
 json = JSON.parse(json);
 
@@ -398,10 +420,40 @@ event.target.value="";
 
 }
 
+const [showAd, setShowAd] = useState(true);
+const handleShowAd = () => setShowAd(true);
+
+const useCloseAd = () => setShowAd(false);
+
+async function buyCloseAd() {
+	
+setShowAd(false);
+window.open('https://codecanyon.net/item/nft-collection-generator-reactjs/43653452', '_blank');
+	
+}
+
 /************/
 
 return (
 <>
+
+<Modal show={showAd} onHide={useCloseAd} animation={false}>
+<Modal.Header closeButton>
+<Modal.Title>Alert</Modal.Title>
+</Modal.Header>
+<Modal.Body>This is a free version and contains ads.</Modal.Body>
+<Modal.Footer>
+<Button variant="secondary" onClick={useCloseAd}>
+Continue with free version
+</Button>
+<Button variant="primary" onClick={buyCloseAd}>
+Buy Ad free version $27.00
+</Button>
+</Modal.Footer>
+</Modal>
+
+
+
 
 {showError.length>0 &&
 <>
@@ -421,7 +473,6 @@ return (
 <Generate props={{w:imageWidth, h:imageWidth, images:images, setShowGenerate:setShowGenerate}} />
 </>
 }
-
 <Container style={{padding:"0", margin:"0"}}>
 
 <Row style={{width:"100vw", height:"100%"}}>
