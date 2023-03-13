@@ -4,13 +4,11 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
-//import ImageGallery from 'react-image-gallery';
-//import '../css/image-gallery.css';
 import Navbar from 'react-bootstrap/Navbar';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 
-const Dialog = ( {props} ) => {
+const Preview = ( {props} ) => {
 	
 return (
 <>
@@ -54,4 +52,4 @@ NFT Collection Generator - Preview
 );
 }
 
-export default Dialog;
+export default Preview;

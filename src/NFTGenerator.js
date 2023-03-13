@@ -14,7 +14,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 import { generateNFT } from './modules/generateNFT';
-import Modal from "./components/Modal";
+import Preview from "./components/Preview";
 import Error from "./components/Error";
 import Generate from "./components/Generate";
 
@@ -412,7 +412,7 @@ return (
 
 {showPreview.length>0 &&
 <>
-<Modal props={{nft:nft, setNft:setNft, setShowPreview:setShowPreview }}/>
+<Preview props={{nft:nft, setNft:setNft, setShowPreview:setShowPreview }}/>
 </>
 }
 

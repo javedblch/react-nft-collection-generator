@@ -79,7 +79,6 @@ e.preventDefault();
 	
 const zip = new JSZip();
 
-
 let w = props.w;
 let h = props.h;
 
@@ -116,6 +115,7 @@ zip.generateAsync({type:"blob"}).then(function(content) {
 FileSaver.saveAs(content, collectionName.replaceAll(" ","-").toLowerCase()+"-nft.zip");
 });
 
+props.setShowGenerate([]);
 
 }
 

@@ -1,23 +1,23 @@
 # React NFT Art Generator
 
-A cutting-edge software application designed to simplify the process of creating and managing NFT Art collections. With its powerful features, intuitive interface, and fast performance, it's the perfect solution for artists, collectors, and anyone looking to create and manage NFT Art.
+A cutting-edge React application designed to simplify the process of creating and managing NFT Art collections. With its powerful features, friendly interface and fast performance, it's the perfect solution for artists, collectors, and anyone looking to create and manage NFT Art Collections.
 
 ## Features
 
-- Unlimited layers and NFT generation capabilities
-- Drag and drop support for arranging elements
-- Addition and deletion of layers
-- Unique gallery view for each layer and its assets
-- Option to delete selected images from a selected layer
-- Export in both PNG and JPG formats
-- NFT Metadata formats for Ethereum, OpenSea, Rarible, and Solana
-- Full screen quick previews of all possible NFT combinations
-- Built using React and React Bootstrap
-- Supports multiple platforms, including Windows, Linux, and Mac OS
+- Unlimited addition of layers, assets and NFT generation capabilities.
+- Drag and drop support for arranging layers.
+- Addition and deletion of layers.
+- Unique gallery view for each layer and its assets.
+- Option to delete images from a selected layer.
+- Supports NFT images export in both PNG and JPG formats.
+- Supports NFT Metadata formats for Ethereum, OpenSea, Rarible, and Solana.
+- Full screen previews of all possible combination of NFT images.
+- Built using ReactJs and React Bootstrap
+- Supports multiple platforms, including Windows, Linux, and Mac OS.
 - Well-written and concise documentation
-- Beautiful user interface with customizable elements
-- Easy to set up with create react project
-- Fast NFT generation process
+- Responsive user interface with customizable elements.
+- Efficient NFT generation process
+- The output images and metadata jsons are compatible for NFT creation to any popular NFT marketplace of your choice.
 
 ## Live Preview - Demo
 

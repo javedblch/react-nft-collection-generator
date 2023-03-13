@@ -7,8 +7,13 @@ let layerArray=[];
 for(var j=0;j<images.data[i].files.length;j++) {
 layerArray.push(images.data[i].files[j].src);
 }
+
+if(images.data[i].files.length)
 imageArrays.push(layerArray);
+
 }
+
+console.log(imageArrays);
 
 let result = await createAllCombinations(imageArrays);
 let nft = await createCanvas(result,w,h,m);
