@@ -21,7 +21,7 @@ A cutting-edge React application designed to simplify the process of creating an
 
 ## Live Preview - Demo
 
-- [Click here](https://react-nft-collection-generator.vercel.app) for online Demo version
+- [Click here](https://ouo.io/uJz5N5J) for online Demo version
 
 ## Files included
 
