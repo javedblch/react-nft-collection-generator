@@ -25,9 +25,12 @@ const NFTGenerator = () => {
 	
 	
 useEffect(() => {
+
+if(process.env.REACT_APP_ADSETRA_JS!='none') {	
+
   const script = document.createElement('script');
 
-  script.src = "//pl18755532.highrevenuegate.com/50/2a/e6/502ae65291e8abd0592a30d5dae16424.js";
+  script.src = process.env.REACT_APP_ADSETRA_JS;
   script.async = true;
 
   document.body.appendChild(script);
@@ -35,6 +38,7 @@ useEffect(() => {
   return () => {
     document.body.removeChild(script);
   }
+}
 }, []);
 	
 
@@ -138,7 +142,7 @@ resolve([image.width,image.height]);
 /************/
 
 const generate = async() => {
-
+	
 let json = JSON.stringify(images);
 json=JSON.parse(json);
 
@@ -160,6 +164,12 @@ break;
 if(filesExists==false) {
 setShowError(['show']);
 setShowErrorMSG('Cannot proceed with empty layers!');
+return;
+}
+
+if(process.env.REACT_APP_VERSION_TYPE=='demo') {
+setShowError(['show']);
+setShowErrorMSG('This is the demo version. Purchase the final version to generate NFT collection');
 return;
 }
 
