@@ -323,7 +323,7 @@ setShowErrorMSG('Invalid Layer Name!');
 return;
 }
 
-window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
+//window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
 
 let json = JSON.stringify(images);
 json = JSON.parse(json);
@@ -437,20 +437,6 @@ window.open('https://codecanyon.net/item/nft-collection-generator-reactjs/436534
 return (
 <>
 
-<Modal show={showAd} onHide={useCloseAd} animation={false}>
-<Modal.Header closeButton>
-<Modal.Title>Alert</Modal.Title>
-</Modal.Header>
-<Modal.Body>This is a free version and contains ads.</Modal.Body>
-<Modal.Footer>
-<Button variant="secondary" onClick={useCloseAd}>
-Continue with free version
-</Button>
-<Button variant="primary" onClick={buyCloseAd}>
-Buy Ad free version $27.00
-</Button>
-</Modal.Footer>
-</Modal>
 
 
 
