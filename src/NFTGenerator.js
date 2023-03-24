@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Form from 'react-bootstrap/Form';
@@ -21,26 +21,6 @@ import Generate from "./components/Generate";
 import Modal from 'react-bootstrap/Modal';
 
 const NFTGenerator = () => {
-	
-	
-	
-useEffect(() => {
-
-if(process.env.REACT_APP_ADSETRA_JS!='none') {	
-
-  const script = document.createElement('script');
-
-  script.src = process.env.REACT_APP_ADSETRA_JS;
-  script.async = true;
-
-  document.body.appendChild(script);
-
-  return () => {
-    document.body.removeChild(script);
-  }
-}
-}, []);
-	
 
 const [currLayer, setCurrLayer] = useState("layer-1");
 const [images, setImages] = useState({"data":[]});	
@@ -167,12 +147,6 @@ setShowErrorMSG('Cannot proceed with empty layers!');
 return;
 }
 
-if(process.env.REACT_APP_VERSION_TYPE=='demo') {
-setShowError(['show']);
-setShowErrorMSG('This is the demo version. Purchase the final version to generate NFT collection');
-return;
-}
-
 setShowGenerate(['show'])
 
 }
@@ -204,8 +178,6 @@ setShowError(['show']);
 setShowErrorMSG('Cannot proceed with empty layers!');
 return;
 }
-
-window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
 
 let w = imageWidth;
 let h = imageHeight;
@@ -333,8 +305,6 @@ setShowErrorMSG('Invalid Layer Name!');
 return;
 }
 
-//window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
-
 let json = JSON.stringify(images);
 json = JSON.parse(json);
 
@@ -428,18 +398,6 @@ setImages(json);
 
 event.target.value="";
 
-}
-
-const [showAd, setShowAd] = useState(true);
-const handleShowAd = () => setShowAd(true);
-
-const useCloseAd = () => setShowAd(false);
-
-async function buyCloseAd() {
-	
-setShowAd(false);
-window.open('https://codecanyon.net/item/nft-collection-generator-reactjs/43653452', '_blank');
-	
 }
 
 /************/

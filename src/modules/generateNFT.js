@@ -13,7 +13,7 @@ imageArrays.push(layerArray);
 
 }
 
-console.log(imageArrays);
+//console.log(imageArrays);
 
 let result = await createAllCombinations(imageArrays);
 let nft = await createCanvas(result,w,h,m);

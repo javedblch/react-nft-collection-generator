@@ -76,8 +76,6 @@ setFeePoints(event.target.value);
 const download = async(e) => {
 	
 e.preventDefault();	
-
-window.open(process.env.REACT_APP_ADSETRA_DIRECT_LINK, '_blank');
 	
 const zip = new JSZip();
 
