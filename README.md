@@ -1,4 +1,4 @@
-# React NFT Art Generator
+# React NFT Collection Generator
 
 A cutting-edge React application designed to simplify the process of creating and managing NFT Art collections. With its powerful features, friendly interface and fast performance, it's the perfect solution for artists, collectors, and anyone looking to create and manage NFT Art Collections.
 
