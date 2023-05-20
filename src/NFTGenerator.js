@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Form from 'react-bootstrap/Form';
@@ -400,12 +400,41 @@ event.target.value="";
 
 }
 
+
+
+const banner = useRef()
+
+
+const atOptions = {
+		'key' : '055ae2475fa55fa5627785d533719b9d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	
+	useEffect(() => {
+    if (!banner.current.firstChild) {
+        const conf = document.createElement('script')
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = `//www.highperformancedformats.com/${atOptions.key}/invoke.js`
+        conf.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`
+
+        if (banner.current) {
+            banner.current.append(conf)
+            banner.current.append(script)
+        }
+    }
+}, [])
+
 /************/
 
 return (
 <>
 
 
+<div ref={banner}></div>
 
 
 
